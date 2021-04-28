@@ -1,10 +1,10 @@
 @import "./reset.css";
 
-* {
+body {
   box-sizing: border-box;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1em;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -16,8 +16,25 @@
 .flexContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: space-between;
+}
+
+#header,
+.section1,
+#section2,
+.section3 {
+  padding: 0 360px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+p {
+  font-size: 14px;
 }
 
 header {
@@ -29,70 +46,123 @@ header {
   background-size: cover;
   background-position: center;
   opacity: 0.8;
-  padding: 50px 20px;
 
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
 }
 
-header > div {
-  margin: 20px;
-}
-
-h1 {
+#header > h1 {
   font-size: 2em;
-  font-weight: bold;
 }
 
-#button {
+#header > p {
+  padding: 30px 0;
+}
+
+.button {
   width: 100px;
   background-color: #333;
   color: white;
-  margin: 0.5em 0;
   border: 1px solid #666;
-  padding: 1em 2em;
+  padding: 10px 20px;
   text-decoration: none;
 }
 
-main {
-  /* color: black; 
-  УМЕНЬШИТЬ РАЗМЕР ШРИФТА ВО ВСЕХ РАЗДЕЛАХ MAIN!
-  */
+main > section {
+  color: black;
+}
+
+.section1 #storyAcme {
+  column-count: 2;
+  padding: 20px 0;
 }
 
 .section1,
-.section2,
-.section3 {
-  color: initial;
+#section3,
+.section4 h2 {
+  font-size: 1.5em;
+}
+.section2 h3 {
+  font-size: 1.2em;
+  padding: 10px 0;
 }
 
-.section1 {
-  margin: 20px;
-}
-
-#storyAcme {
-  column-count: 2;
-  padding: 1em;
-}
-
-.section2 {
+#section2 {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* flex-wrap: wrap; */
+  justify-content: center;
 
   background-color: #333;
-  padding: 2em 1em 1em;
 }
 
-.article {
-  margin: 1em;
+#section2 > div {
+  width: 0.33;
+  margin: 20px 10px 10px;
+  padding: 0 0 30px;
   background-color: white;
 }
 
+#section2 p {
+  padding: 17px 0;
+}
+
 .picture {
-  width: 100%;
-  height: 162px;
+  width: 272px;
+  height: 181px;
   object-position: top;
+}
+
+.content {
+  padding: 26px;
+}
+
+#section2 > .div1 .section3,
+.section4 h2,
+h3 {
+  padding: 30px 0 30px;
+}
+
+.section4 {
+  display: flex;
+}
+
+.contactUs {
+  width: 50%;
+  background: #2690d4;
+}
+
+.aboutCompany {
+  width: 50%;
+  background-color: #333;
+}
+
+.section4 div {
+  padding: 32px;
+}
+
+.section3,
+.section4 p {
+  padding: 17px 0;
+}
+
+.section3 p {
+  padding: 17px 0;
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.acmeFooter,
+.projectedBy {
+  padding: 30px 0 30px;
+}
+
+.projectedBy {
+  display: flex;
+}
+.projectedBy > p {
+  padding-right: 10px;
 }
